@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderSummary"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verMid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/horStart"
+        app:layout_constraintLeft_toLeftOf="@id/verStart"
+        app:layout_constraintRight_toRightOf="@id/verEnd"
+        >
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;"
+            android:textSize="36dp"
+            android:fontFamily="@font/poppinsextrabold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppinsextrabold"
+            android:gravity="center"
+            android:text="Order Summary"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/hor1"
+        app:layout_constraintLeft_toLeftOf="@+id/verStart"
+        app:layout_constraintRight_toRightOf="@+id/verEnd">
+
+        <!-- Title -->
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/nemo"
+            android:layout_marginRight="24dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Finding Nemo"
+                android:textSize="24dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppinssemibold"/>
+
+            <TextView
+                android:id="@+id/tvBioskop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXI Ambarukmo Plaza, Studio 1"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppinssemibold"/>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wednesday, 22-08-2023"
+                android:textSize="14dp"
+                android:fontFamily="@font/poppinssemibold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/orderNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        app:layout_constraintLeft_toLeftOf="@id/verStart"
+        app:layout_constraintTop_toBottomOf="@+id/card">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Number"
+            />
+        <TextView
+            android:id="@+id/tvOrderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1232124"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="@id/verStart"
+        app:layout_constraintTop_toBottomOf="@+id/orderNumber"
+        android:layout_marginTop="12dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seat"
+            />
+        <TextView
+            android:id="@+id/tvSeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regular 2D"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="@id/verStart"
+        app:layout_constraintTop_toBottomOf="@+id/seat"
+        android:layout_marginTop="12dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Method"
+            />
+        <TextView
+            android:id="@+id/tvPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank Transfer (BNI)"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="@id/verStart"
+        app:layout_constraintTop_toBottomOf="@+id/payment"
+        android:layout_marginTop="12dp">
+        <TextView
+            android:id="@+id/tvSeat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Method"
+            />
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp35000"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="@id/verStart"
+        app:layout_constraintTop_toBottomOf="@+id/seat2"
+        android:layout_marginTop="12dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convinience Fee"
+            />
+        <TextView
+            android:id="@+id/tvFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp0"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/horiLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/indigo_400"
+        app:layout_constraintTop_toBottomOf="@id/fee"
+        app:layout_constraintLeft_toLeftOf="@+id/verStart"
+        app:layout_constraintRight_toRightOf="@+id/verEnd"
+        />
+
+    <LinearLayout
+        android:id="@+id/pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="@id/verStart"
+        app:layout_constraintTop_toBottomOf="@+id/horiLine"
+        android:layout_marginTop="12dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            />
+        <TextView
+            android:id="@+id/tvPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp35000"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"
+            android:textSize="24dp"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

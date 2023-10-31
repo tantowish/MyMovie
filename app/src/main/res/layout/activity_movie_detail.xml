@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MovieDetail">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <LinearLayout
+        android:id="@+id/tvActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/horStart"
+        app:layout_constraintLeft_toLeftOf="@id/verStart"
+        app:layout_constraintRight_toRightOf="@id/verEnd"
+        >
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;"
+            android:textSize="36dp"
+            android:fontFamily="@font/poppinsextrabold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppinsextrabold"
+            android:gravity="center"
+            android:text="Movie Detail"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/hor1"
+        app:layout_constraintBottom_toTopOf="@id/btnTicket"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="12dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/hor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.55" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horEnd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/verStart2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/verEnd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="240dp"
+                android:layout_height="350dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/nemo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppinsextrabold"
+                android:text="Finding Nemo"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/image"
+                app:layout_constraintLeft_toLeftOf="@id/verStart2"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/image"
+                app:layout_constraintRight_toRightOf="@id/verEnd2"
+                android:orientation="horizontal"
+                android:layout_marginTop="14dp"
+                >
+
+                <TextView
+                    android:id="@+id/tvRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="4.9"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="4dp"/>
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/star"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDirector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Director :"
+                android:textSize="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                app:layout_constraintLeft_toLeftOf="@id/verStart2"
+                app:layout_constraintRight_toRightOf="@id/verEnd2"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvDirector"
+                app:layout_constraintLeft_toLeftOf="@id/verStart2"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:clipToPadding="false"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                />
+
+            <TextView
+                android:id="@+id/tvStory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppinsextrabold"
+                android:text="Storyline"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/rvGenre"
+                app:layout_constraintLeft_toLeftOf="@id/verStart2"/>
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Lorem Ipsum"
+                android:textSize="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tvStory"
+                app:layout_constraintLeft_toLeftOf="@id/verStart2"
+                app:layout_constraintRight_toRightOf="@id/verEnd2"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTicket"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button"
+        android:text="Get Ticket"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/horEnd"
+        app:layout_constraintLeft_toLeftOf="@id/verStart"
+        app:layout_constraintRight_toRightOf="@+id/verEnd"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="16dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

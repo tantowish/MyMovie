@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">myMovie</string>
+    <string name="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+    <array name="bioskop">
+        <item>Select</item>
+        <item>XXI Ambarukmo Plaza, Studio 1</item>
+        <item>XXI Ambarukmo Plaza, Studio 2</item>
+        <item>XXI Empire, Studio 2</item>
+        <item>XXI Jogja City Mall, Studio 1</item>
+        <item>XXI Jogja City Mall, Studio 3</item>
+        <item>CGV Jwalk Mall, Studio 1</item>
+        <item>Cinepolis Lippo Plaza Jogja, Studio 6</item>
+    </array>
+    <array name="seats">
+        <item>Select</item>
+        <item>Regular 2D</item>
+        <item>Regular 3D</item>
+        <item>4DX</item>
+        <item>Sphere X</item>
+        <item>Sweetbox</item>
+        <item>Velvet Class</item>
+        <item>Satin Suite</item>
+    </array>
+    <array name="payments">
+        <item>Select</item>
+        <item>Bank Transfer</item>
+        <item>Scan</item>
+    </array>
+    <array name="payment1">
+        <item>Select</item>
+        <item>BNI</item>
+        <item>BCA</item>
+        <item>CIMB NIAGA</item>
+        <item>Sumsel Babel</item>
+    </array>
+    <array name="payment2">
+        <item>Qris</item>
+    </array>
+
+</resources>

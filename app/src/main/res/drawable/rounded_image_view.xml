@@ -1,0 +1,8 @@
+<!-- res/drawable/rounded_image_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" /> <!-- Background color of the ImageView -->
+    <stroke
+        android:width="2dp"
+        android:color="@android:color/black" />
+    <corners android:radius="20dp" /> <!-- Adjust the radius to control the roundness -->
+</shape>
