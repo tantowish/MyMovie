@@ -42,6 +42,7 @@ class HomeFragment : Fragment() {
         }
 
 //        binding.rvMovies.layoutManager = LinearLayoutManager(requireContext())
+
         binding.rvMovies.adapter = adapter
 
         binding.tvUsername.text = username
