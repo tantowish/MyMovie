@@ -28,11 +28,11 @@ class MovieDetail : AppCompatActivity() {
             tvRate.text = ""+movie.rate
             tvDirector.text = "Director : "+movie.director
 
-                btnTicket.setOnClickListener {
-                    val intent = Intent(this@MovieDetail, Payment::class.java)
-                    intent.putExtra("movieData", movie)
-                    startActivity(intent)
-                }
+            btnTicket.setOnClickListener {
+                val intent = Intent(this@MovieDetail, Payment::class.java)
+                intent.putExtra("movieData", movie)
+                startActivity(intent)
+            }
         }
     }
 }
