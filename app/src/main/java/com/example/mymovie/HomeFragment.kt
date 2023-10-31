@@ -41,7 +41,7 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
-        binding.rvMovies.layoutManager = LinearLayoutManager(requireContext())
+//        binding.rvMovies.layoutManager = LinearLayoutManager(requireContext())
         binding.rvMovies.adapter = adapter
 
         binding.tvUsername.text = username
